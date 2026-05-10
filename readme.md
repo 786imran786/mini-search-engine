@@ -1,155 +1,52 @@
-# 🚀 Mini Search Engine — GitHub + Railway Deployment Guide
-
-# 📌 FULL PROJECT WORKFLOW
-
-```text
-Crawler
-   ↓
-Web Scraping
-   ↓
-SQLite Database
-   ↓
-Tokenization
-   ↓
-Stopword Removal
-   ↓
-Stemming
-   ↓
-TF-IDF Ranking
-   ↓
-Flask Backend
-   ↓
-Search Website UI
-```
-
----
-
-# 📌 PROJECT FEATURES
-
-## ✅ Web Crawling
-- BFS crawling
-- URL normalization
-- duplicate prevention
-- domain restriction
-- polite crawling using delays
-
-## ✅ NLP Processing
-- tokenization
-- stopword removal
-- stemming
-
-## ✅ Search Engine Logic
-- inverted indexing
-- TF-IDF ranking
-- relevance scoring
-- ranked retrieval
-
-## ✅ Backend
-- Flask integration
-- SQLite database
-- caching
-- pagination
-- query suggestions
-- search history
-
-## ✅ Frontend
-- modern UI
-- dark theme
-- search bar
-- result cards
-- snippets
-- clickable URLs
-
----
-
-# 📌 TECH STACK
-
-| Technology | Purpose |
-|---|---|
-| Python | Core programming |
-| Flask | Web framework |
-| SQLite | Database |
-| BeautifulSoup | HTML parsing |
-| Requests | HTTP requests |
-| NLTK | NLP processing |
-| TF-IDF | Ranking algorithm |
-| HTML/CSS | Frontend UI |
-
----
-
-# 📌 FUTURE IMPROVEMENTS
-
-- Async crawling
-- PageRank algorithm
-- Autocomplete using Trie
-- Query suggestions
-- Elasticsearch integration
-- MongoDB/PostgreSQL support
-- User authentication
-- AI semantic search
-- Transformer embeddings
-
----
-
-# 📌 README.md
-
-Create file:
-
-```text
-README.md
-```
-
-Paste this:
-
-```markdown
 # 🔎 Mini Search Engine
 
 A full-stack intelligent search engine built using **Python, Flask, SQLite, NLP, and TF-IDF ranking**.  
-This project crawls websites, extracts content, indexes webpages, ranks search results using TF-IDF, and provides a clean web interface for searching information.
+This project crawls webpages, processes textual data using NLP techniques, indexes documents efficiently, and retrieves ranked search results through a responsive web interface.
 
 ---
 
 # 🚀 Features
 
 ## 🌐 Web Crawling
-- BFS-based crawler
+- BFS-based web crawler
 - Domain-restricted crawling
 - Duplicate URL prevention
 - URL normalization
 - Polite crawling using delays
-- Content extraction using BeautifulSoup
+- HTML parsing using BeautifulSoup
+- Content extraction and storage
 
 ## 🧠 NLP Processing
 - Tokenization
 - Stopword removal
-- Stemming using NLTK Porter Stemmer
+- Porter stemming using NLTK
 - Query preprocessing
 
 ## 📊 Search Engine Logic
-- Inverted Index
-- TF-IDF Ranking
-- Relevance scoring
-- Ranked search retrieval
+- Inverted indexing
+- TF-IDF ranking
+- Relevance-based retrieval
+- Ranked search results
 - Snippet generation
 
 ## ⚡ Backend Features
 - Flask backend
-- SQLite database storage
-- Search history
+- SQLite database integration
+- Search history tracking
 - Query suggestions
-- Pagination
-- Simple caching system
+- Pagination support
+- Lightweight caching system
 
 ## 🎨 Frontend
-- Modern dark UI
-- Responsive search page
-- Result cards
-- Clickable links
+- Modern responsive UI
+- Dark-themed interface
+- Search bar with result cards
+- Clickable URLs
 - Search snippets
 
 ---
 
-# 🏗️ Project Architecture
+# 🏗️ Project Workflow
 
 ```text
 Crawler
@@ -176,14 +73,14 @@ Search Engine UI
 # 🛠️ Tech Stack
 
 | Technology | Purpose |
-|---|---|
+|------------|----------|
 | Python | Core programming |
-| Flask | Web framework |
+| Flask | Backend framework |
 | SQLite | Database |
 | BeautifulSoup | HTML parsing |
 | Requests | HTTP requests |
 | NLTK | NLP preprocessing |
-| HTML/CSS | Frontend |
+| HTML/CSS | Frontend development |
 | TF-IDF | Ranking algorithm |
 
 ---
@@ -199,6 +96,7 @@ mini_search_engine/
 ├── indexer.py
 ├── search_engine.db
 ├── requirements.txt
+├── README.md
 │
 ├── templates/
 │     └── index.html
@@ -211,15 +109,34 @@ mini_search_engine/
 
 # ⚙️ Installation
 
-## 1️⃣ Clone Repository
+## 1️⃣ Clone The Repository
 
 ```bash
 git clone YOUR_REPOSITORY_LINK
+cd mini_search_engine
 ```
 
 ---
 
-## 2️⃣ Install Dependencies
+## 2️⃣ Create Virtual Environment (Optional)
+
+### Windows
+
+```bash
+python -m venv venv
+venv\Scripts\activate
+```
+
+### Linux / Mac
+
+```bash
+python3 -m venv venv
+source venv/bin/activate
+```
+
+---
+
+## 3️⃣ Install Dependencies
 
 ```bash
 pip install -r requirements.txt
@@ -235,14 +152,15 @@ pip install -r requirements.txt
 python crawler.py
 ```
 
-This:
-- visits webpages
-- extracts content
-- stores data into SQLite database
+This step:
+- Visits webpages
+- Extracts content
+- Cleans and processes data
+- Stores documents into SQLite database
 
 ---
 
-## Step 2 — Launch Search Engine
+## Step 2 — Start Flask Server
 
 ```bash
 python app.py
@@ -258,14 +176,15 @@ http://127.0.0.1:5000
 
 ---
 
-# 🔍 Example Searches
+# 🔍 Example Search Queries
 
 ```text
-python
+python programming
+machine learning
 binary tree
 dynamic programming
 graph algorithms
-machine learning
+data science
 ```
 
 ---
@@ -273,19 +192,21 @@ machine learning
 # 🌟 Future Improvements
 
 - Async crawling
-- PageRank algorithm
+- PageRank implementation
 - Trie-based autocomplete
-- Semantic search
+- AI semantic search
 - Transformer embeddings
 - Elasticsearch integration
-- PostgreSQL/MongoDB support
-- AI-powered recommendations
+- PostgreSQL support
+- MongoDB support
+- User authentication system
 
 ---
 
 # 🚀 Deployment
 
 This project can be deployed easily on:
+
 - Railway
 - Render
 - Koyeb
@@ -295,14 +216,13 @@ This project can be deployed easily on:
 
 # 📌 Resume Description
 
-Developed and deployed a full-stack intelligent search engine using Flask, SQLite, NLP preprocessing, TF-IDF ranking, and web crawling techniques. Implemented indexing, ranked retrieval, pagination, caching, and search result rendering through a responsive web interface.
+Developed and deployed a full-stack intelligent search engine using Flask, SQLite, NLP preprocessing, TF-IDF ranking, and web crawling techniques. Implemented indexing, ranked retrieval, query preprocessing, pagination, caching, and responsive frontend rendering for efficient information retrieval.
 
 ---
 
 # 👨‍💻 Author
 
-Md Imran Siddiqui
+**Md Imran Siddiqui**  
 B.Tech Computer Science Student
 
-```
-
+---
