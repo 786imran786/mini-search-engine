@@ -207,20 +207,12 @@ data science
 
 # 🚀 Deployment
 
-This project can be deployed easily on:
+This project has been deployed on:
 
 - Railway
-- Render
-- Koyeb
-- Oracle Cloud
 
 ---
 
-# 📌 Resume Description
-
-Developed and deployed a full-stack intelligent search engine using Flask, SQLite, NLP preprocessing, TF-IDF ranking, and web crawling techniques. Implemented indexing, ranked retrieval, query preprocessing, pagination, caching, and responsive frontend rendering for efficient information retrieval.
-
----
 
 # 👨‍💻 Author
 
