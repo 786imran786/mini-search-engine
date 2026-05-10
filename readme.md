@@ -4,6 +4,8 @@ A full-stack intelligent search engine built using **Python, Flask, SQLite, NLP,
 This project crawls webpages, processes textual data using NLP techniques, indexes documents efficiently, and retrieves ranked search results through a responsive web interface.
 
 ---
+<img width="1536" height="1024" alt="ChatGPT Image May 10, 2026, 11_14_09 AM" src="https://github.com/user-attachments/assets/f31a5595-a5c5-456c-939d-5bab288e8a31" />
+
 
 # 🚀 Features
 
